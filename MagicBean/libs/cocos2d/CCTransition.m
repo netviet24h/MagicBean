@@ -159,7 +159,7 @@ const uint32_t kSceneFade = 0xFADEFADE;
 	// only the onExitTransitionDidStart
 	[outScene_ onExitTransitionDidStart];
     // enable
-    [[CCDirector sharedDirector] setDepthTest: YES];
+    //[[CCDirector sharedDirector] setDepthTest: YES];
 	[inScene_ onEnter];
 }
 
@@ -169,7 +169,7 @@ const uint32_t kSceneFade = 0xFADEFADE;
 	[super onExit];
 	[outScene_ onExit];
     // disable
-    [[CCDirector sharedDirector] setDepthTest: NO];
+    //[[CCDirector sharedDirector] setDepthTest: NO];
 	// inScene_ should not receive the onEnter callback
 	// only the onEnterTransitionDidFinish
 	[inScene_ onEnterTransitionDidFinish];
