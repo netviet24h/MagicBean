@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>p19_fl</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,131},{220,258}}</string>
+                <key>offset</key>
+                <string>{-1,0}</string>
+                <key>sourceSize</key>
+                <string>{220,258}</string>
+            </dict>
+            <key>p19_ms</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{250,127}}</string>
+                <key>offset</key>
+                <string>{0,-1}</string>
+                <key>sourceSize</key>
+                <string>{250,127}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+            <key>realTextureFileName</key>
+            <string>p19.pvr.ccz</string>
+            <key>size</key>
+            <string>{254,391}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:a838cec2dce90105a0fa92f72ca79379$</string>
+            <key>textureFileName</key>
+            <string>p19.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>1</integer>
+		<key>ptm_ratio</key>
+		<real>32</real>
+	</dict>
+	<key>bodies</key>
+	<dict>
+		<key>p25_btt</key>
+		<dict>
+			<key>anchorpoint</key>
+			<string>{ 0.5000,0.5000 }</string>
+			<key>fixtures</key>
+			<array>
+				<dict>
+					<key>density</key>
+					<real>2</real>
+					<key>friction</key>
+					<real>0</real>
+					<key>restitution</key>
+					<real>0</real>
+					<key>filter_categoryBits</key>
+					<integer>1</integer>
+					<key>filter_groupIndex</key>
+					<integer>0</integer>
+					<key>filter_maskBits</key>
+					<integer>65535</integer>
+					<key>isSensor</key>
+					<false/>
+					<key>id</key>
+					<string></string>
+					<key>fixture_type</key>
+					<string>POLYGON</string>
+					<key>polygons</key>
+					<array>
+						<array>
+							<string>{ -45.500,94.000 }</string>
+							<string>{ -41.500,76.000 }</string>
+							<string>{ 52.500,72.000 }</string>
+							<string>{ 64.500,78.000 }</string>
+							<string>{ 41.500,94.000 }</string>
+						</array>
+						<array>
+							<string>{ -45.500,95.000 }</string>
+							<string>{ -88.500,59.000 }</string>
+							<string>{ -80.500,51.000 }</string>
+							<string>{ -41.500,75.000 }</string>
+						</array>
+						<array>
+							<string>{ 64.500,78.000 }</string>
+							<string>{ 52.500,72.000 }</string>
+							<string>{ 86.500,26.000 }</string>
+							<string>{ 94.500,34.000 }</string>
+						</array>
+						<array>
+							<string>{ -88.500,59.000 }</string>
+							<string>{ -91.500,35.000 }</string>
+							<string>{ -91.500,-128.000 }</string>
+							<string>{ -87.500,-138.000 }</string>
+							<string>{ -82.500,-133.000 }</string>
+							<string>{ -80.500,51.000 }</string>
+						</array>
+						<array>
+							<string>{ -87.500,-138.000 }</string>
+							<string>{ -21.500,-164.000 }</string>
+							<string>{ -19.500,-154.000 }</string>
+							<string>{ -82.500,-133.000 }</string>
+						</array>
+						<array>
+							<string>{ -19.500,-154.000 }</string>
+							<string>{ -21.500,-164.000 }</string>
+							<string>{ 45.500,-162.000 }</string>
+							<string>{ 41.500,-152.000 }</string>
+						</array>
+						<array>
+							<string>{ 41.500,-152.000 }</string>
+							<string>{ 45.500,-162.000 }</string>
+							<string>{ 95.500,-136.000 }</string>
+							<string>{ 87.500,-129.000 }</string>
+						</array>
+						<array>
+							<string>{ 94.500,34.000 }</string>
+							<string>{ 86.500,26.000 }</string>
+							<string>{ 87.500,-129.000 }</string>
+							<string>{ 95.500,-136.000 }</string>
+						</array>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<key>p25_seed</key>
+		<dict>
+			<key>anchorpoint</key>
+			<string>{ 0.4175,0.6389 }</string>
+			<key>fixtures</key>
+			<array>
+				<dict>
+					<key>density</key>
+					<real>2</real>
+					<key>friction</key>
+					<real>0</real>
+					<key>restitution</key>
+					<real>0.1</real>
+					<key>filter_categoryBits</key>
+					<integer>1</integer>
+					<key>filter_groupIndex</key>
+					<integer>0</integer>
+					<key>filter_maskBits</key>
+					<integer>65535</integer>
+					<key>isSensor</key>
+					<false/>
+					<key>id</key>
+					<string></string>
+					<key>fixture_type</key>
+					<string>POLYGON</string>
+					<key>polygons</key>
+					<array>
+						<array>
+							<string>{ 51.000,1.000 }</string>
+							<string>{ 11.000,23.000 }</string>
+							<string>{ -10.000,23.000 }</string>
+							<string>{ -36.000,9.000 }</string>
+							<string>{ -37.000,-14.000 }</string>
+							<string>{ -24.000,-22.000 }</string>
+							<string>{ -5.000,-26.000 }</string>
+							<string>{ 21.000,-21.000 }</string>
+						</array>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</dict>
+</dict>
+</plist>

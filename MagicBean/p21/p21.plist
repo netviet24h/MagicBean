@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>p21_leaf</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{397,298}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>sourceSize</key>
+                <string>{397,298}</string>
+            </dict>
+            <key>p21_mk</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,302},{186,191}}</string>
+                <key>offset</key>
+                <string>{0,-7}</string>
+                <key>sourceSize</key>
+                <string>{186,191}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+            <key>realTextureFileName</key>
+            <string>p21.pvr.ccz</string>
+            <key>size</key>
+            <string>{401,495}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e0537dd67fcbfa70461e41a0739a5665$</string>
+            <key>textureFileName</key>
+            <string>p21.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

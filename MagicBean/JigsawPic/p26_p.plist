@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>p24_fhotoframe.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{1024,768}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>sourceSize</key>
+                <string>{1024,768}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+            <key>realTextureFileName</key>
+            <string>p26_p.pvr.ccz</string>
+            <key>size</key>
+            <string>{1024,768}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:235d91a99f2b011e4d1a49b03f2222ee$</string>
+            <key>textureFileName</key>
+            <string>p26_p.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

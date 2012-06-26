@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<!-- created with http://www.physicseditor.de -->
+
+<plist version="1.0">
+	<dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+            <key>ptm_ratio</key>
+            <real>32</real>
+        </dict>
+        <key>bodies</key>
+		<dict>
+
+			<key>p21_1</key>
+			<dict>
+				<key>anchorpoint</key>
+                <string>{ 0.2821,0.9864 }</string>
+				<key>fixtures</key>
+				<array>
+
+					<dict>
+                        <key>density</key> <real>2</real>
+                        <key>friction</key> <real>0</real>
+                        <key>restitution</key> <real>0</real>
+                        <key>filter_categoryBits</key> <integer>1</integer>
+                        <key>filter_groupIndex</key> <integer>0</integer>
+                        <key>filter_maskBits</key> <integer>65535</integer>
+                        <key>isSensor</key> <false/>
+                        <key>id</key> <string></string>
+                        <key>fixture_type</key> <string>POLYGON</string>
+
+						<key>polygons</key>
+						<array>
+							<array>	
+								<string>{ 34.330,3.000 }</string>	
+								<string>{ -13.670,2.000 }</string>	
+								<string>{ -10.670,-216.000 }</string>	
+								<string>{ 30.330,-215.000 }</string>
+							</array>
+						</array>
+                    </dict>
+				</array>
+			</dict>
+			<key>p21_leaf</key>
+			<dict>
+				<key>anchorpoint</key>
+                <string>{ 0.5424,0.9767 }</string>
+				<key>fixtures</key>
+				<array>
+
+					<dict>
+                        <key>density</key> <real>0.2</real>
+                        <key>friction</key> <real>0</real>
+                        <key>restitution</key> <real>0.8</real>
+                        <key>filter_categoryBits</key> <integer>1</integer>
+                        <key>filter_groupIndex</key> <integer>0</integer>
+                        <key>filter_maskBits</key> <integer>65535</integer>
+                        <key>isSensor</key> <false/>
+                        <key>id</key> <string></string>
+                        <key>fixture_type</key> <string>POLYGON</string>
+
+						<key>polygons</key>
+						<array>
+							<array>	
+								<string>{ -103.320,-143.000 }</string>	
+								<string>{ -114.320,-171.000 }</string>	
+								<string>{ -68.320,-272.000 }</string>	
+								<string>{ 9.680,-257.000 }</string>	
+								<string>{ 43.680,-232.000 }</string>	
+								<string>{ -37.320,-145.000 }</string>
+							</array>
+							<array>	
+								<string>{ -212.320,-226.000 }</string>	
+								<string>{ -68.320,-272.000 }</string>	
+								<string>{ -114.320,-171.000 }</string>	
+								<string>{ -177.320,-187.000 }</string>
+							</array>
+							<array>	
+								<string>{ 179.680,-127.000 }</string>	
+								<string>{ 127.680,-106.000 }</string>	
+								<string>{ 49.680,-124.000 }</string>	
+								<string>{ 50.680,-227.000 }</string>
+							</array>
+							<array>	
+								<string>{ 49.680,-124.000 }</string>	
+								<string>{ 1.680,-117.000 }</string>	
+								<string>{ -11.320,-129.000 }</string>	
+								<string>{ 43.680,-232.000 }</string>	
+								<string>{ 50.680,-227.000 }</string>
+							</array>
+							<array>	
+								<string>{ -37.320,-145.000 }</string>	
+								<string>{ 43.680,-232.000 }</string>	
+								<string>{ -11.320,-129.000 }</string>
+							</array>
+							<array>	
+								<string>{ -5.320,7.000 }</string>	
+								<string>{ -12.320,-45.000 }</string>	
+								<string>{ -11.320,-129.000 }</string>	
+								<string>{ 1.680,-117.000 }</string>	
+								<string>{ 5.680,8.000 }</string>
+							</array>
+							<array>	
+								<string>{ 46.680,-290.000 }</string>	
+								<string>{ 50.680,-227.000 }</string>	
+								<string>{ 43.680,-232.000 }</string>
+							</array>
+						</array>
+                    </dict>
+				</array>
+			</dict>
+			<key>p21_mk</key>
+			<dict>
+				<key>anchorpoint</key>
+                <string>{ 0.6720,0.6683 }</string>
+				<key>fixtures</key>
+				<array>
+
+					<dict>
+                        <key>density</key> <real>2</real>
+                        <key>friction</key> <real>0</real>
+                        <key>restitution</key> <real>0.8</real>
+                        <key>filter_categoryBits</key> <integer>1</integer>
+                        <key>filter_groupIndex</key> <integer>0</integer>
+                        <key>filter_maskBits</key> <integer>65535</integer>
+                        <key>isSensor</key> <false/>
+                        <key>id</key> <string></string>
+                        <key>fixture_type</key> <string>POLYGON</string>
+
+						<key>polygons</key>
+						<array>
+							<array>	
+								<string>{ -6.000,-103.000 }</string>	
+								<string>{ 15.000,-104.000 }</string>	
+								<string>{ -5.000,-46.000 }</string>
+							</array>
+							<array>	
+								<string>{ -106.000,-17.000 }</string>	
+								<string>{ -109.000,-84.000 }</string>	
+								<string>{ -109.000,-99.000 }</string>	
+								<string>{ -49.000,-18.000 }</string>
+							</array>
+							<array>	
+								<string>{ -100.000,-122.000 }</string>	
+								<string>{ -77.000,-128.000 }</string>	
+								<string>{ -11.000,-111.000 }</string>	
+								<string>{ -6.000,-80.000 }</string>	
+								<string>{ -5.000,-46.000 }</string>	
+								<string>{ -109.000,-99.000 }</string>
+							</array>
+							<array>	
+								<string>{ -21.000,42.000 }</string>	
+								<string>{ -49.000,-18.000 }</string>	
+								<string>{ 52.000,41.000 }</string>	
+								<string>{ 36.000,53.000 }</string>
+							</array>
+							<array>	
+								<string>{ -5.000,-46.000 }</string>	
+								<string>{ 52.000,41.000 }</string>	
+								<string>{ -49.000,-18.000 }</string>	
+								<string>{ -109.000,-99.000 }</string>
+							</array>
+						</array>
+                    </dict>
+				</array>
+			</dict>
+		</dict>
+	</dict>
+</plist>
+

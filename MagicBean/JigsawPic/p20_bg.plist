@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>frames</key>
+	<dict>
+		<key>mask33_1</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0,768},{341,256}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>sourceSize</key>
+			<string>{341,256}</string>
+		</dict>
+		<key>p20_bg</key>
+		<dict>
+			<key>frame</key>
+			<string>{{0,0},{1024,768}}</string>
+			<key>offset</key>
+			<string>{0,0}</string>
+			<key>sourceSize</key>
+			<string>{1024,768}</string>
+		</dict>
+	</dict>
+	<key>metadata</key>
+	<dict>
+		<key>format</key>
+		<integer>1</integer>
+		<key>realTextureFileName</key>
+		<string>p20_bg.pvr.ccz</string>
+		<key>size</key>
+		<string>{1024,1024}</string>
+		<key>smartupdate</key>
+		<string>$TexturePacker:SmartUpdate:82925ea61c92ebc4199b2a4a7268b607$</string>
+		<key>textureFileName</key>
+		<string>p20_bg.pvr.ccz</string>
+	</dict>
+</dict>
+</plist>
