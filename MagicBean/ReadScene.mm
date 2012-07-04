@@ -7,7 +7,7 @@
 //
 #define CCCA(x) [[x copy] autorelease]
 #import "ReadScene.h"
-int sceneIdx = 10;
+int sceneIdx = 1;
 Class selectAction(int i)
 {	
 	// HACK: else NSClassFromString will fail
