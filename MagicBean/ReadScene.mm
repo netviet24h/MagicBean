@@ -721,6 +721,10 @@ Class backAction()
 	}
 	return self;
 }
+//-(void)registerWithTouchDispatcher
+//{
+//    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:NO];
+//}
 - (void) ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     //[super ccTouchesBegan:touches withEvent:event];
@@ -787,17 +791,20 @@ Class backAction()
 }
 -(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CCSprite *rabbit = (CCSprite*)[spritesBgNode getChildByTag:100];
-	CCSprite *watter = (CCSprite*)[rabbit getChildByTag:100];
-    [rabbit stopActionByTag:101];
-	UITouch *touch = [touches anyObject];
-    CGPoint rightPosition = [touch locationInView:[touch view]];
-    rightPosition = [[CCDirector sharedDirector] convertToGL:rightPosition];
-	[watter pauseSchedulerAndActions];
-	//[batchNode_ removeChild:emitter_ cleanup:YES];
-	[emitter_ stopSystem];
-	canMove = NO;
-    
+    if (canMove) {
+        CCSprite *rabbit = (CCSprite*)[spritesBgNode getChildByTag:100];
+        CCSprite *watter = (CCSprite*)[rabbit getChildByTag:100];
+        [rabbit stopActionByTag:101];
+        UITouch *touch = [touches anyObject];
+        CGPoint rightPosition = [touch locationInView:[touch view]];
+        rightPosition = [[CCDirector sharedDirector] convertToGL:rightPosition];
+        [watter pauseSchedulerAndActions];
+        //[batchNode_ removeChild:emitter_ cleanup:YES];
+        [emitter_ stopSystem];
+        canMove = NO;
+
+    }
+        
 }
 @end      
 
@@ -2873,7 +2880,7 @@ Class backAction()
         sprBody.position = ccp(422,380);//for ipad
         
         
-       
+        
         bodyDef.type = b2_dynamicBody;
         bodyDef.position.Set(sprBody.position.x/PTM_RATIO,sprBody.position.y/PTM_RATIO );
         bodyDef.userData = sprBody;

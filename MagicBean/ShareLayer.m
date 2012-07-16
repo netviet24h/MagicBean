@@ -83,7 +83,7 @@ UITableView *g_table;
         [[[CCDirector sharedDirector] openGLView] addSubview:self.myTableView];
         
         myTableView.separatorStyle = NO;//取消cell间横线
-        //myTableView.delaysContentTouches = 5;
+        myTableView.delaysContentTouches = 5;
         //myTableView.scrollEnabled = NO;
         g_table = myTableView;
         [table release];
@@ -266,7 +266,6 @@ UITableView *g_table;
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[[imageViewCellCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
@@ -298,4 +297,5 @@ UITableView *g_table;
     return NO;
     
 }
+
 @end
