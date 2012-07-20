@@ -22,6 +22,7 @@
 #import "MenuScene.h"
 #import "pintu.h"
 #import "GameLayer.h"
+#import "StoryLayer.h"
 #import "ReadScene.h"
 #import "ShareLayer.h"
 

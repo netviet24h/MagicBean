@@ -131,8 +131,6 @@ Class backAction()
 -(id)init
 {
 	if ((self = [super initWithColor:ccc4(255, 255, 255, 255)])) {
-        
-        
 		screenSize = [CCDirector sharedDirector].winSize;
         spritesBgNode = [CCSpriteBatchNode batchNodeWithFile:[NSString stringWithFormat:@"p%d.pvr.ccz",sceneIdx]];
         useBox2d = NO;
@@ -162,7 +160,7 @@ Class backAction()
         NSString *wenzi =[NSString stringWithFormat:@"P%dLABEL",sceneIdx];        
         wenzi = NSLocalizedString(wenzi, nil);
         label = [CCLabelTTF labelWithString:wenzi dimensions:CGSizeMake(700, 200) alignment:UITextAlignmentLeft lineBreakMode:UILineBreakModeClip fontName:@"FZMWFont.ttf" fontSize:25];
-        [self addChild:label z:20];
+        //[self addChild:label z:20];
         label.anchorPoint = ccp(0.5,1);
         label.color = ccc3(0, 0, 0);
         label.position = ccp(500,492);//for ipad
@@ -572,6 +570,8 @@ Class backAction()
 		CCLOG(@"in layer1");
 		//[self initBox2d];
         [self loadSpriteSheet];
+        CCLayer *storyLayer = [[StoryLayer alloc] initWithName:@"p1" totallNum:3];
+        [self addChild:storyLayer z:10];
         vel = ccp(1.5,0);
         //cloud 
 		for (int i = 0 ; i<5; i++) {
@@ -710,7 +710,7 @@ Class backAction()
 		[a setTag:101];
         [aniWater runAction:a];
 		
-
+        
 
 		
 		//[aniWater stopAllActions];

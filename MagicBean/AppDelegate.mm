@@ -115,6 +115,7 @@
      screenSize = [CCDirector sharedDirector].winSize;
 	[[CCDirector sharedDirector] runWithScene: [PageCommon  scene]];
 	//[[CCDirector sharedDirector] runWithScene: [GameLayer  scene]];   
+    //[[CCDirector sharedDirector] runWithScene: [StoryLayer  scene]];
 }
 
 
