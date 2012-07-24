@@ -90,6 +90,6 @@ public:
 
 @interface Common : CCNode
 + (NSInteger)createRandomsizeValueInt:(NSInteger)fromInt toInt:(NSInteger)toInt;
-
++ (BOOL)isTransparentWithSprite: (CCSprite *)sprite pointInNodeSpace: (CGPoint) point onto:(CCLayer*)layer;//scaleto:(float)scale rotateto:(float)rotate
 + (double)createRandomsizeValueFloat:(double)fromFloat toFloat:(double)toFloat;
 @end

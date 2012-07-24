@@ -152,14 +152,14 @@
 		2C755C2D1547C56D001273BF /* p16_mask_bg.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C755C2C1547C56D001273BF /* p16_mask_bg.pvr.ccz */; };
 		2C775DC8154835A0001F2159 /* GB2ShapeCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C775DC7154835A0001F2159 /* GB2ShapeCache.mm */; };
 		2C84D3241559E58B007D7B06 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C84D3231559E58B007D7B06 /* Default-Landscape~ipad.png */; };
-		2C8C59201559FA5000BC3329 /* CCMultiColumnTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.m */; };
-		2C8C59211559FA5000BC3329 /* CCScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59111559FA5000BC3329 /* CCScrollView.m */; };
-		2C8C59221559FA5000BC3329 /* CCTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59131559FA5000BC3329 /* CCTableView.m */; };
-		2C8C59231559FA5000BC3329 /* CCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59151559FA5000BC3329 /* CCTableViewCell.m */; };
-		2C8C59251559FA5000BC3329 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59191559FA5000BC3329 /* MyCell.m */; };
-		2C8C59261559FA5000BC3329 /* MyDoubleSizedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.m */; };
-		2C8C59271559FA5000BC3329 /* ScrollViewScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591D1559FA5000BC3329 /* ScrollViewScene.m */; };
-		2C8C59281559FA5000BC3329 /* TableViewScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591F1559FA5000BC3329 /* TableViewScene.m */; };
+		2C8C59201559FA5000BC3329 /* CCMultiColumnTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.mm */; };
+		2C8C59211559FA5000BC3329 /* CCScrollView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59111559FA5000BC3329 /* CCScrollView.mm */; };
+		2C8C59221559FA5000BC3329 /* CCTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59131559FA5000BC3329 /* CCTableView.mm */; };
+		2C8C59231559FA5000BC3329 /* CCTableViewCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59151559FA5000BC3329 /* CCTableViewCell.mm */; };
+		2C8C59251559FA5000BC3329 /* MyCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C59191559FA5000BC3329 /* MyCell.mm */; };
+		2C8C59261559FA5000BC3329 /* MyDoubleSizedCell.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.mm */; };
+		2C8C59271559FA5000BC3329 /* ScrollViewScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591D1559FA5000BC3329 /* ScrollViewScene.mm */; };
+		2C8C59281559FA5000BC3329 /* TableViewScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C591F1559FA5000BC3329 /* TableViewScene.mm */; };
 		2C8C5970155A2DC700BC3329 /* GameLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C8C596F155A2DC700BC3329 /* GameLayer.mm */; };
 		2C8D459B15372241001C4FB5 /* p19.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C8D459815372241001C4FB5 /* p19.plist */; };
 		2C8D459C15372241001C4FB5 /* p19.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C8D459915372241001C4FB5 /* p19.pvr.ccz */; };
@@ -604,21 +604,21 @@
 		2C775DC7154835A0001F2159 /* GB2ShapeCache.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GB2ShapeCache.mm; sourceTree = "<group>"; };
 		2C84D3231559E58B007D7B06 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		2C8C590E1559FA5000BC3329 /* CCMultiColumnTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMultiColumnTableView.h; sourceTree = "<group>"; };
-		2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMultiColumnTableView.m; sourceTree = "<group>"; };
+		2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCMultiColumnTableView.mm; sourceTree = "<group>"; };
 		2C8C59101559FA5000BC3329 /* CCScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCScrollView.h; sourceTree = "<group>"; };
-		2C8C59111559FA5000BC3329 /* CCScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCScrollView.m; sourceTree = "<group>"; };
+		2C8C59111559FA5000BC3329 /* CCScrollView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCScrollView.mm; sourceTree = "<group>"; };
 		2C8C59121559FA5000BC3329 /* CCTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableView.h; sourceTree = "<group>"; };
-		2C8C59131559FA5000BC3329 /* CCTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableView.m; sourceTree = "<group>"; };
+		2C8C59131559FA5000BC3329 /* CCTableView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCTableView.mm; sourceTree = "<group>"; };
 		2C8C59141559FA5000BC3329 /* CCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTableViewCell.h; sourceTree = "<group>"; };
-		2C8C59151559FA5000BC3329 /* CCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTableViewCell.m; sourceTree = "<group>"; };
+		2C8C59151559FA5000BC3329 /* CCTableViewCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CCTableViewCell.mm; sourceTree = "<group>"; };
 		2C8C59181559FA5000BC3329 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
-		2C8C59191559FA5000BC3329 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		2C8C59191559FA5000BC3329 /* MyCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyCell.mm; sourceTree = "<group>"; };
 		2C8C591A1559FA5000BC3329 /* MyDoubleSizedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDoubleSizedCell.h; sourceTree = "<group>"; };
-		2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDoubleSizedCell.m; sourceTree = "<group>"; };
+		2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MyDoubleSizedCell.mm; sourceTree = "<group>"; };
 		2C8C591C1559FA5000BC3329 /* ScrollViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewScene.h; sourceTree = "<group>"; };
-		2C8C591D1559FA5000BC3329 /* ScrollViewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewScene.m; sourceTree = "<group>"; };
+		2C8C591D1559FA5000BC3329 /* ScrollViewScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScrollViewScene.mm; sourceTree = "<group>"; };
 		2C8C591E1559FA5000BC3329 /* TableViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewScene.h; sourceTree = "<group>"; };
-		2C8C591F1559FA5000BC3329 /* TableViewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewScene.m; sourceTree = "<group>"; };
+		2C8C591F1559FA5000BC3329 /* TableViewScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TableViewScene.mm; sourceTree = "<group>"; };
 		2C8C596E155A2DC700BC3329 /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
 		2C8C596F155A2DC700BC3329 /* GameLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GameLayer.mm; sourceTree = "<group>"; };
 		2C8D459815372241001C4FB5 /* p19.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p19.plist; sourceTree = "<group>"; };
@@ -1369,21 +1369,21 @@
 			isa = PBXGroup;
 			children = (
 				2C8C590E1559FA5000BC3329 /* CCMultiColumnTableView.h */,
-				2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.m */,
+				2C8C590F1559FA5000BC3329 /* CCMultiColumnTableView.mm */,
 				2C8C59101559FA5000BC3329 /* CCScrollView.h */,
-				2C8C59111559FA5000BC3329 /* CCScrollView.m */,
+				2C8C59111559FA5000BC3329 /* CCScrollView.mm */,
 				2C8C59121559FA5000BC3329 /* CCTableView.h */,
-				2C8C59131559FA5000BC3329 /* CCTableView.m */,
+				2C8C59131559FA5000BC3329 /* CCTableView.mm */,
 				2C8C59141559FA5000BC3329 /* CCTableViewCell.h */,
-				2C8C59151559FA5000BC3329 /* CCTableViewCell.m */,
+				2C8C59151559FA5000BC3329 /* CCTableViewCell.mm */,
 				2C8C59181559FA5000BC3329 /* MyCell.h */,
-				2C8C59191559FA5000BC3329 /* MyCell.m */,
+				2C8C59191559FA5000BC3329 /* MyCell.mm */,
 				2C8C591A1559FA5000BC3329 /* MyDoubleSizedCell.h */,
-				2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.m */,
+				2C8C591B1559FA5000BC3329 /* MyDoubleSizedCell.mm */,
 				2C8C591C1559FA5000BC3329 /* ScrollViewScene.h */,
-				2C8C591D1559FA5000BC3329 /* ScrollViewScene.m */,
+				2C8C591D1559FA5000BC3329 /* ScrollViewScene.mm */,
 				2C8C591E1559FA5000BC3329 /* TableViewScene.h */,
-				2C8C591F1559FA5000BC3329 /* TableViewScene.m */,
+				2C8C591F1559FA5000BC3329 /* TableViewScene.mm */,
 			);
 			path = CCTableSuite;
 			sourceTree = "<group>";
@@ -2589,14 +2589,14 @@
 				2CD9631015527E2E007CC11D /* ShareLayer.m in Sources */,
 				2CEA4F3815537DDC00D32C0C /* ShareViewController.mm in Sources */,
 				2CA6535E1558BA6F0042AC27 /* imageViewCellCell.mm in Sources */,
-				2C8C59201559FA5000BC3329 /* CCMultiColumnTableView.m in Sources */,
-				2C8C59211559FA5000BC3329 /* CCScrollView.m in Sources */,
-				2C8C59221559FA5000BC3329 /* CCTableView.m in Sources */,
-				2C8C59231559FA5000BC3329 /* CCTableViewCell.m in Sources */,
-				2C8C59251559FA5000BC3329 /* MyCell.m in Sources */,
-				2C8C59261559FA5000BC3329 /* MyDoubleSizedCell.m in Sources */,
-				2C8C59271559FA5000BC3329 /* ScrollViewScene.m in Sources */,
-				2C8C59281559FA5000BC3329 /* TableViewScene.m in Sources */,
+				2C8C59201559FA5000BC3329 /* CCMultiColumnTableView.mm in Sources */,
+				2C8C59211559FA5000BC3329 /* CCScrollView.mm in Sources */,
+				2C8C59221559FA5000BC3329 /* CCTableView.mm in Sources */,
+				2C8C59231559FA5000BC3329 /* CCTableViewCell.mm in Sources */,
+				2C8C59251559FA5000BC3329 /* MyCell.mm in Sources */,
+				2C8C59261559FA5000BC3329 /* MyDoubleSizedCell.mm in Sources */,
+				2C8C59271559FA5000BC3329 /* ScrollViewScene.mm in Sources */,
+				2C8C59281559FA5000BC3329 /* TableViewScene.mm in Sources */,
 				2C8C5970155A2DC700BC3329 /* GameLayer.mm in Sources */,
 				2C3B7DC215B8F9A2000F4FFE /* StoryLayer.mm in Sources */,
 			);
