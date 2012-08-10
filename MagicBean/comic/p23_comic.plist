@@ -4,59 +4,59 @@
     <dict>
         <key>frames</key>
         <dict>
-            <key>p1_1</key>
+            <key>p23_comic_1</key>
             <dict>
                 <key>frame</key>
-                <string>{{848,2},{1024,209}}</string>
+                <string>{{733,1036},{729,515}}</string>
                 <key>offset</key>
-                <string>{0,-61}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{1024,209}</string>
+                <string>{729,515}</string>
             </dict>
-            <key>p1_2</key>
+            <key>p23_comic_2</key>
             <dict>
                 <key>frame</key>
-                <string>{{200,323},{192,121}}</string>
+                <string>{{733,519},{729,515}}</string>
                 <key>offset</key>
-                <string>{-32,25}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{192,121}</string>
+                <string>{729,515}</string>
             </dict>
-            <key>p1_3</key>
+            <key>p23_comic_3</key>
             <dict>
                 <key>frame</key>
-                <string>{{848,213},{382,211}}</string>
+                <string>{{2,1036},{729,515}}</string>
                 <key>offset</key>
-                <string>{-321,-56}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{382,211}</string>
+                <string>{729,515}</string>
             </dict>
-            <key>p1_4</key>
+            <key>p23_comic_4</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,2},{844,319}}</string>
+                <string>{{2,519},{729,515}}</string>
                 <key>offset</key>
-                <string>{-68,-6}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{844,319}</string>
+                <string>{729,515}</string>
             </dict>
-            <key>p1_yun_1</key>
+            <key>p23_comic_5</key>
             <dict>
                 <key>frame</key>
-                <string>{{2,323},{196,154}}</string>
+                <string>{{733,2},{729,515}}</string>
                 <key>offset</key>
-                <string>{2,-8}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{196,154}</string>
+                <string>{729,515}</string>
             </dict>
-            <key>p1_yun_2</key>
+            <key>p23_comic_6</key>
             <dict>
                 <key>frame</key>
-                <string>{{1232,213},{196,198}}</string>
+                <string>{{2,2},{729,515}}</string>
                 <key>offset</key>
-                <string>{1,0}</string>
+                <string>{1,2}</string>
                 <key>sourceSize</key>
-                <string>{196,198}</string>
+                <string>{729,515}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -64,13 +64,13 @@
             <key>format</key>
             <integer>1</integer>
             <key>realTextureFileName</key>
-            <string>p1.pvr.ccz</string>
+            <string>p23_comic.pvr.ccz</string>
             <key>size</key>
-            <string>{1874,479}</string>
+            <string>{1464,1553}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fd1aed0e186d47a8546236280e1b2cb2$</string>
+            <string>$TexturePacker:SmartUpdate:d859f4c8832904f9c5b9fb522dcca412$</string>
             <key>textureFileName</key>
-            <string>p1.pvr.ccz</string>
+            <string>p23_comic.pvr.ccz</string>
         </dict>
     </dict>
 </plist>
