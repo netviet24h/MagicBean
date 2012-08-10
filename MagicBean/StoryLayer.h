@@ -14,6 +14,7 @@
     BOOL _finished;
     BOOL couldTouch;
     NSString *PicName;
+    //CCSpriteBatchNode *spriteBatch;
     b2Body *groundBody;
     b2World* world;	
     b2Vec2 m_mouseWorld;

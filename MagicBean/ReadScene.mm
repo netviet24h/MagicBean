@@ -862,7 +862,8 @@ Class backAction()
 {
 	if ((self = [super init])) {
         self.isAccelerometerEnabled = NO;
-        
+        CCLayer *storyLayer = [[StoryLayer alloc] initWithName:@"p3" totallNum:4];
+        [self addChild:storyLayer z:10];
 		CCLOG(@"in layer3");
         [self loadSpriteSheet];
         [self initBox2d];

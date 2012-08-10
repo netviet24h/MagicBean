@@ -140,7 +140,8 @@
     currentNum++;
     if (currentNum<=totallNum) {
         CGSize wSize = [[CCDirector sharedDirector] winSize];
-        CCSprite *sp=[CCSprite spriteWithFile:[NSString stringWithFormat:@"%@_story_%d.png",PicName,currentNum]];
+        [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[NSString stringWithFormat:@"%@_comic.plist",PicName]];
+        CCSprite *sp=[CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"%@_comic_%d",PicName,currentNum]];
         sp.opacity = 0;
         [sp runAction:[CCFadeIn actionWithDuration:0.5]];
         sp.anchorPoint=ccp(0.5,0.5);
@@ -169,7 +170,7 @@
         
             
         {
-            CCSprite *xian = [CCSprite spriteWithFile:@"p1_story_xian.png"];    
+            CCSprite *xian = [CCSprite spriteWithFile:@"comic_line.png"];    
             xian.opacity = 0;
             [xian runAction:[CCFadeIn actionWithDuration:0.1]];
             xian.position = ccp(179,640);
@@ -316,7 +317,7 @@
 //        touchButton.position = ccp(screenSize.width/2,touchButton.contentSize.height/2);
 //        [self addChild:touchButton z: 2 tag:11111];
         
-        CCSprite *bg = [CCSprite spriteWithFile:@"hei.png"];
+        CCSprite *bg = [CCSprite spriteWithFile:@"comic_blackBg.png"];
         bg.position  = ccp(screenSize.width/2,screenSize.height/2);
         [self addChild:bg z: -1 ];
         
@@ -417,12 +418,9 @@
 
 -(void)ccTouchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    
 	for( UITouch *touch in touches ) {
     }
 }
-
-
 -(void)dealloc
 {
     [super dealloc];

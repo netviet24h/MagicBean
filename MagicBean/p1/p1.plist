@@ -11,7 +11,7 @@
                 <key>offset</key>
                 <string>{0,-61}</string>
                 <key>sourceSize</key>
-                <string>{1024,209}</string>
+                <string>{1024,331}</string>
             </dict>
             <key>p1_2</key>
             <dict>
@@ -20,7 +20,7 @@
                 <key>offset</key>
                 <string>{-32,25}</string>
                 <key>sourceSize</key>
-                <string>{192,121}</string>
+                <string>{1024,331}</string>
             </dict>
             <key>p1_3</key>
             <dict>
@@ -29,7 +29,7 @@
                 <key>offset</key>
                 <string>{-321,-56}</string>
                 <key>sourceSize</key>
-                <string>{382,211}</string>
+                <string>{1024,331}</string>
             </dict>
             <key>p1_4</key>
             <dict>
@@ -38,7 +38,7 @@
                 <key>offset</key>
                 <string>{-68,-6}</string>
                 <key>sourceSize</key>
-                <string>{844,319}</string>
+                <string>{1024,331}</string>
             </dict>
             <key>p1_yun_1</key>
             <dict>
@@ -47,7 +47,7 @@
                 <key>offset</key>
                 <string>{2,-8}</string>
                 <key>sourceSize</key>
-                <string>{196,154}</string>
+                <string>{200,200}</string>
             </dict>
             <key>p1_yun_2</key>
             <dict>
@@ -56,7 +56,7 @@
                 <key>offset</key>
                 <string>{1,0}</string>
                 <key>sourceSize</key>
-                <string>{196,198}</string>
+                <string>{200,200}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -68,7 +68,7 @@
             <key>size</key>
             <string>{1874,479}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:fd1aed0e186d47a8546236280e1b2cb2$</string>
+            <string>$TexturePacker:SmartUpdate:894321ea9fe9ecd0644e988e97f3e929$</string>
             <key>textureFileName</key>
             <string>p1.pvr.ccz</string>
         </dict>
