@@ -25,6 +25,15 @@
             <key>p21_comic_3</key>
             <dict>
                 <key>frame</key>
+                <string>{{733,2},{729,515}}</string>
+                <key>offset</key>
+                <string>{1,2}</string>
+                <key>sourceSize</key>
+                <string>{729,515}</string>
+            </dict>
+            <key>p21_comic_4</key>
+            <dict>
+                <key>frame</key>
                 <string>{{2,2},{729,515}}</string>
                 <key>offset</key>
                 <string>{1,2}</string>
@@ -39,9 +48,9 @@
             <key>realTextureFileName</key>
             <string>p21_comic.pvr.ccz</string>
             <key>size</key>
-            <string>{733,1553}</string>
+            <string>{1464,1553}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6461f556b9818f265681da916688ad7e$</string>
+            <string>$TexturePacker:SmartUpdate:b448ae51facf99596724eb56803d4acd$</string>
             <key>textureFileName</key>
             <string>p21_comic.pvr.ccz</string>
         </dict>

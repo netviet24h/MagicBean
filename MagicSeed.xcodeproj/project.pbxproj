@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2C0957FB153533BE00EB6E50 /* p15.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C0957F9153533BE00EB6E50 /* p15.plist */; };
 		2C0957FC153533BE00EB6E50 /* p15.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C0957FA153533BE00EB6E50 /* p15.pvr.ccz */; };
+		2C0A311915D94D0B009DB6A8 /* comic_zhizhu_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0A311715D94D0B009DB6A8 /* comic_zhizhu_1.png */; };
+		2C0A311A15D94D0B009DB6A8 /* comic_zhizhu_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C0A311815D94D0B009DB6A8 /* comic_zhizhu_2.png */; };
 		2C195C5415D4ED460053E88C /* p11_comic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C195C3815D4ED460053E88C /* p11_comic.plist */; };
 		2C195C5515D4ED460053E88C /* p11_comic.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C195C3915D4ED460053E88C /* p11_comic.pvr.ccz */; };
 		2C195C5615D4ED460053E88C /* p13_comic.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C195C3A15D4ED460053E88C /* p13_comic.plist */; };
@@ -154,6 +156,14 @@
 		2C3BDED81523142A005F137E /* p3.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BDED61523142A005F137E /* p3.plist */; };
 		2C3BDED91523142A005F137E /* p3.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BDED71523142A005F137E /* p3.pvr.ccz */; };
 		2C3BDF79152323E6005F137E /* p3_body.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BDF78152323E6005F137E /* p3_body.plist */; };
+		2C4020CC15D7CDC500EDDAC9 /* index_Scene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C4020C915D7CDC500EDDAC9 /* index_Scene.mm */; };
+		2C4020CD15D7CDC500EDDAC9 /* MaskBarSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4020CB15D7CDC500EDDAC9 /* MaskBarSprite.m */; };
+		2C4020D315D7CDEF00EDDAC9 /* index_Scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4020D015D7CDEF00EDDAC9 /* index_Scene.plist */; };
+		2C4020D415D7CDEF00EDDAC9 /* index_Scene.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C4020D115D7CDEF00EDDAC9 /* index_Scene.pvr.ccz */; };
+		2C4020D515D7CDEF00EDDAC9 /* index_Scene.tps in Resources */ = {isa = PBXBuildFile; fileRef = 2C4020D215D7CDEF00EDDAC9 /* index_Scene.tps */; };
+		2C4020D815D7D44A00EDDAC9 /* MainMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C4020D715D7D44A00EDDAC9 /* MainMenu.mm */; };
+		2C4020DC15D7D46900EDDAC9 /* MainMenu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4020DA15D7D46900EDDAC9 /* MainMenu.plist */; };
+		2C4020DD15D7D46900EDDAC9 /* MainMenu.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C4020DB15D7D46900EDDAC9 /* MainMenu.pvr.ccz */; };
 		2C4821951545A29C00383481 /* p26_bg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4821911545A29C00383481 /* p26_bg.plist */; };
 		2C4821961545A29C00383481 /* p26_bg.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C4821921545A29C00383481 /* p26_bg.pvr.ccz */; };
 		2C4821971545A29C00383481 /* p26_p.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C4821931545A29C00383481 /* p26_p.plist */; };
@@ -353,7 +363,6 @@
 		2C96A5BA152061BA00F6D0DD /* VRope.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5B6152061BA00F6D0DD /* VRope.mm */; };
 		2C96A5BB152061BA00F6D0DD /* VStick.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5B8152061BA00F6D0DD /* VStick.mm */; };
 		2C96A5C21520620700F6D0DD /* common.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5BD1520620600F6D0DD /* common.mm */; };
-		2C96A5C31520620700F6D0DD /* MenuScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5BF1520620600F6D0DD /* MenuScene.mm */; };
 		2C96A5C41520620700F6D0DD /* ReadScene.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5C11520620600F6D0DD /* ReadScene.mm */; };
 		2C96A5C81520623B00F6D0DD /* SCListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C96A5C71520623B00F6D0DD /* SCListener.m */; };
 		2C96D5B6153B253300A8B761 /* p27.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C96D5B4153B253300A8B761 /* p27.plist */; };
@@ -369,6 +378,8 @@
 		2C9752971539C552008754A3 /* p26.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9752941539C552008754A3 /* p26.plist */; };
 		2C9752981539C552008754A3 /* p26.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2C9752951539C552008754A3 /* p26.pvr.ccz */; };
 		2C9752991539C552008754A3 /* p26_body.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2C9752961539C552008754A3 /* p26_body.plist */; };
+		2CA46A5C15D9768B001F87D2 /* p23_comic1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CA46A5A15D9768B001F87D2 /* p23_comic1.plist */; };
+		2CA46A5D15D9768B001F87D2 /* p23_comic1.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2CA46A5B15D9768B001F87D2 /* p23_comic1.pvr.ccz */; };
 		2CA4E51015331C8B0044982A /* p11.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4E50D15331C8B0044982A /* p11.plist */; };
 		2CA4E51115331C8B0044982A /* p11.pvr.ccz in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4E50E15331C8B0044982A /* p11.pvr.ccz */; };
 		2CA4E51215331C8B0044982A /* p11_body.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CA4E50F15331C8B0044982A /* p11_body.plist */; };
@@ -436,6 +447,8 @@
 /* Begin PBXFileReference section */
 		2C0957F9153533BE00EB6E50 /* p15.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p15.plist; sourceTree = "<group>"; };
 		2C0957FA153533BE00EB6E50 /* p15.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p15.pvr.ccz; sourceTree = "<group>"; };
+		2C0A311715D94D0B009DB6A8 /* comic_zhizhu_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comic_zhizhu_1.png; sourceTree = "<group>"; };
+		2C0A311815D94D0B009DB6A8 /* comic_zhizhu_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comic_zhizhu_2.png; sourceTree = "<group>"; };
 		2C195C3815D4ED460053E88C /* p11_comic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p11_comic.plist; sourceTree = "<group>"; };
 		2C195C3915D4ED460053E88C /* p11_comic.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p11_comic.pvr.ccz; sourceTree = "<group>"; };
 		2C195C3A15D4ED460053E88C /* p13_comic.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p13_comic.plist; sourceTree = "<group>"; };
@@ -629,6 +642,17 @@
 		2C3BDED61523142A005F137E /* p3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p3.plist; sourceTree = "<group>"; };
 		2C3BDED71523142A005F137E /* p3.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p3.pvr.ccz; sourceTree = "<group>"; };
 		2C3BDF78152323E6005F137E /* p3_body.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p3_body.plist; sourceTree = "<group>"; };
+		2C4020C815D7CDC500EDDAC9 /* index_Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = index_Scene.h; sourceTree = "<group>"; };
+		2C4020C915D7CDC500EDDAC9 /* index_Scene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = index_Scene.mm; sourceTree = "<group>"; };
+		2C4020CA15D7CDC500EDDAC9 /* MaskBarSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskBarSprite.h; sourceTree = "<group>"; };
+		2C4020CB15D7CDC500EDDAC9 /* MaskBarSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskBarSprite.m; sourceTree = "<group>"; };
+		2C4020D015D7CDEF00EDDAC9 /* index_Scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = index_Scene.plist; sourceTree = "<group>"; };
+		2C4020D115D7CDEF00EDDAC9 /* index_Scene.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = index_Scene.pvr.ccz; sourceTree = "<group>"; };
+		2C4020D215D7CDEF00EDDAC9 /* index_Scene.tps */ = {isa = PBXFileReference; lastKnownFileType = file; path = index_Scene.tps; sourceTree = "<group>"; };
+		2C4020D615D7D44A00EDDAC9 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenu.h; sourceTree = "<group>"; };
+		2C4020D715D7D44A00EDDAC9 /* MainMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainMenu.mm; sourceTree = "<group>"; };
+		2C4020DA15D7D46900EDDAC9 /* MainMenu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MainMenu.plist; sourceTree = "<group>"; };
+		2C4020DB15D7D46900EDDAC9 /* MainMenu.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainMenu.pvr.ccz; sourceTree = "<group>"; };
 		2C4821911545A29C00383481 /* p26_bg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p26_bg.plist; sourceTree = "<group>"; };
 		2C4821921545A29C00383481 /* p26_bg.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p26_bg.pvr.ccz; sourceTree = "<group>"; };
 		2C4821931545A29C00383481 /* p26_p.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p26_p.plist; sourceTree = "<group>"; };
@@ -968,8 +992,6 @@
 		2C96A5B8152061BA00F6D0DD /* VStick.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = VStick.mm; sourceTree = "<group>"; };
 		2C96A5BC1520620600F6D0DD /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		2C96A5BD1520620600F6D0DD /* common.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = common.mm; sourceTree = "<group>"; };
-		2C96A5BE1520620600F6D0DD /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
-		2C96A5BF1520620600F6D0DD /* MenuScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuScene.mm; sourceTree = "<group>"; };
 		2C96A5C01520620600F6D0DD /* ReadScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadScene.h; sourceTree = "<group>"; };
 		2C96A5C11520620600F6D0DD /* ReadScene.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReadScene.mm; sourceTree = "<group>"; };
 		2C96A5C61520623B00F6D0DD /* SCListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCListener.h; sourceTree = "<group>"; };
@@ -987,6 +1009,8 @@
 		2C9752941539C552008754A3 /* p26.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p26.plist; sourceTree = "<group>"; };
 		2C9752951539C552008754A3 /* p26.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p26.pvr.ccz; sourceTree = "<group>"; };
 		2C9752961539C552008754A3 /* p26_body.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p26_body.plist; sourceTree = "<group>"; };
+		2CA46A5A15D9768B001F87D2 /* p23_comic1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p23_comic1.plist; sourceTree = "<group>"; };
+		2CA46A5B15D9768B001F87D2 /* p23_comic1.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p23_comic1.pvr.ccz; sourceTree = "<group>"; };
 		2CA4E50D15331C8B0044982A /* p11.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p11.plist; sourceTree = "<group>"; };
 		2CA4E50E15331C8B0044982A /* p11.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = p11.pvr.ccz; sourceTree = "<group>"; };
 		2CA4E50F15331C8B0044982A /* p11_body.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = p11_body.plist; sourceTree = "<group>"; };
@@ -1092,6 +1116,8 @@
 		2C195C3715D4ED460053E88C /* comic */ = {
 			isa = PBXGroup;
 			children = (
+				2C0A311715D94D0B009DB6A8 /* comic_zhizhu_1.png */,
+				2C0A311815D94D0B009DB6A8 /* comic_zhizhu_2.png */,
 				2C195C7015D4EEF30053E88C /* comic_blackBg.png */,
 				2C195C7115D4EEF30053E88C /* comic_line.png */,
 				2C195C3815D4ED460053E88C /* p11_comic.plist */,
@@ -1110,6 +1136,8 @@
 				2C195C4515D4ED460053E88C /* p21_comic.pvr.ccz */,
 				2C195C4615D4ED460053E88C /* p23_comic.plist */,
 				2C195C4715D4ED460053E88C /* p23_comic.pvr.ccz */,
+				2CA46A5A15D9768B001F87D2 /* p23_comic1.plist */,
+				2CA46A5B15D9768B001F87D2 /* p23_comic1.pvr.ccz */,
 				2C195C4815D4ED460053E88C /* p25_comic.plist */,
 				2C195C4915D4ED460053E88C /* p25_comic.pvr.ccz */,
 				2C195C4A15D4ED460053E88C /* p27_comic.plist */,
@@ -1400,6 +1428,36 @@
 			path = p3;
 			sourceTree = "<group>";
 		};
+		2C4020C715D7CDC500EDDAC9 /* index_src */ = {
+			isa = PBXGroup;
+			children = (
+				2C4020C815D7CDC500EDDAC9 /* index_Scene.h */,
+				2C4020C915D7CDC500EDDAC9 /* index_Scene.mm */,
+				2C4020CA15D7CDC500EDDAC9 /* MaskBarSprite.h */,
+				2C4020CB15D7CDC500EDDAC9 /* MaskBarSprite.m */,
+			);
+			path = index_src;
+			sourceTree = "<group>";
+		};
+		2C4020CF15D7CDEF00EDDAC9 /* index_res */ = {
+			isa = PBXGroup;
+			children = (
+				2C4020D015D7CDEF00EDDAC9 /* index_Scene.plist */,
+				2C4020D115D7CDEF00EDDAC9 /* index_Scene.pvr.ccz */,
+				2C4020D215D7CDEF00EDDAC9 /* index_Scene.tps */,
+			);
+			path = index_res;
+			sourceTree = "<group>";
+		};
+		2C4020D915D7D46900EDDAC9 /* MainMenu_res */ = {
+			isa = PBXGroup;
+			children = (
+				2C4020DA15D7D46900EDDAC9 /* MainMenu.plist */,
+				2C4020DB15D7D46900EDDAC9 /* MainMenu.pvr.ccz */,
+			);
+			path = MainMenu_res;
+			sourceTree = "<group>";
+		};
 		2C6AFA051533D8A9000EDC2B /* p12 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1599,12 +1657,13 @@
 				2C96A5A71520618100F6D0DD /* jigsaw */,
 				2C96A5A21520615400F6D0DD /* GameCenter */,
 				2C775DC51548359F001F2159 /* generic-box2d-plist */,
+				2C4020C715D7CDC500EDDAC9 /* index_src */,
 				2C31033A15216927001D45C1 /* GLES-Render.h */,
 				2C31033B15216927001D45C1 /* GLES-Render.mm */,
 				2C96A5BC1520620600F6D0DD /* common.h */,
 				2C96A5BD1520620600F6D0DD /* common.mm */,
-				2C96A5BE1520620600F6D0DD /* MenuScene.h */,
-				2C96A5BF1520620600F6D0DD /* MenuScene.mm */,
+				2C4020D615D7D44A00EDDAC9 /* MainMenu.h */,
+				2C4020D715D7D44A00EDDAC9 /* MainMenu.mm */,
 				2C96A5C01520620600F6D0DD /* ReadScene.h */,
 				2C96A5C11520620600F6D0DD /* ReadScene.mm */,
 				2C3B7DC115B8F9A2000F4FFE /* StoryLayer.h */,
@@ -1655,14 +1714,16 @@
 				2CF7D8061527E87700A1CF27 /* p6 */,
 				2CD6F5F11526A29100A8460F /* p5 */,
 				2CF5241A15244BC900D9F157 /* p4 */,
-				2C2D4006152315B50030E71D /* Others */,
 				2C3BDED51523142A005F137E /* p3 */,
-				2C3BD33D1522EBC6005F137E /* sound */,
 				2CE763171522D89B003396FC /* p2 */,
+				2C31034D15218B81001D45C1 /* p1 */,
+				2C3BD33D1522EBC6005F137E /* sound */,
+				2C4020D915D7D46900EDDAC9 /* MainMenu_res */,
 				2CEFF5A31521AE6D004E9841 /* FZMWFont.ttf */,
 				2CEFF54615219E18004E9841 /* particlePlist */,
 				2C3103591521952E001D45C1 /* Anniu */,
-				2C31034D15218B81001D45C1 /* p1 */,
+				2C4020CF15D7CDEF00EDDAC9 /* index_res */,
+				2C2D4006152315B50030E71D /* Others */,
 				2C96A3C415205F8500F6D0DD /* Default.png */,
 				2CEFF54B1521A37D004E9841 /* g_background.jpg */,
 				2C96A3C615205F8500F6D0DD /* fps_images.png */,
@@ -2528,6 +2589,15 @@
 				2C195C6F15D4ED460053E88C /* p9_comic.pvr.ccz in Resources */,
 				2C195C7215D4EEF30053E88C /* comic_blackBg.png in Resources */,
 				2C195C7315D4EEF30053E88C /* comic_line.png in Resources */,
+				2C4020D315D7CDEF00EDDAC9 /* index_Scene.plist in Resources */,
+				2C4020D415D7CDEF00EDDAC9 /* index_Scene.pvr.ccz in Resources */,
+				2C4020D515D7CDEF00EDDAC9 /* index_Scene.tps in Resources */,
+				2C4020DC15D7D46900EDDAC9 /* MainMenu.plist in Resources */,
+				2C4020DD15D7D46900EDDAC9 /* MainMenu.pvr.ccz in Resources */,
+				2C0A311915D94D0B009DB6A8 /* comic_zhizhu_1.png in Resources */,
+				2C0A311A15D94D0B009DB6A8 /* comic_zhizhu_2.png in Resources */,
+				2CA46A5C15D9768B001F87D2 /* p23_comic1.plist in Resources */,
+				2CA46A5D15D9768B001F87D2 /* p23_comic1.pvr.ccz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2644,7 +2714,6 @@
 				2C96A5BA152061BA00F6D0DD /* VRope.mm in Sources */,
 				2C96A5BB152061BA00F6D0DD /* VStick.mm in Sources */,
 				2C96A5C21520620700F6D0DD /* common.mm in Sources */,
-				2C96A5C31520620700F6D0DD /* MenuScene.mm in Sources */,
 				2C96A5C41520620700F6D0DD /* ReadScene.mm in Sources */,
 				2C96A5C81520623B00F6D0DD /* SCListener.m in Sources */,
 				2C31030A15216828001D45C1 /* b2BroadPhase.cpp in Sources */,
@@ -2707,6 +2776,9 @@
 				2C8C59281559FA5000BC3329 /* TableViewScene.mm in Sources */,
 				2C8C5970155A2DC700BC3329 /* GameLayer.mm in Sources */,
 				2C3B7DC215B8F9A2000F4FFE /* StoryLayer.mm in Sources */,
+				2C4020CC15D7CDC500EDDAC9 /* index_Scene.mm in Sources */,
+				2C4020CD15D7CDC500EDDAC9 /* MaskBarSprite.m in Sources */,
+				2C4020D815D7D44A00EDDAC9 /* MainMenu.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

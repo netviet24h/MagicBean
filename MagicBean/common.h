@@ -19,13 +19,13 @@
 #import <AudioToolbox/AudioToolbox.h>
 #import <AVFoundation/AVAudioPlayer.h>
 #import <AVFoundation/AVAudioSession.h>
-#import "MenuScene.h"
+#import "MainMenu.h"
 #import "pintu.h"
 #import "GameLayer.h"
 #import "StoryLayer.h"
 #import "ReadScene.h"
 #import "ShareLayer.h"
-
+#import "index_Scene.h"
 class MyQueryCallback : public b2QueryCallback
 {
 public:

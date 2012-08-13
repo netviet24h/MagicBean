@@ -29,10 +29,13 @@
     b2Body *pictureBody;
     b2Body *bodyxian1;
     b2Body *bodyxian2;
+    b2Joint *revJoint3;
+    b2Body *bodyxian3;
+    b2Body *pictureBody3;
 }
 @property (assign,nonatomic) BOOL Finished;
 @property (copy,nonatomic) NSString *PicName;
 +(CCScene *) scene;
 -(void)initBox2d;
--(id)initWithName:(NSString *)picname   totallNum:(int)to_num;
+-(id)initWithName:(NSString *)picname;
 @end

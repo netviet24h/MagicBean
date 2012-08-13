@@ -113,7 +113,7 @@
 	
 	// Run the intro Scene
      screenSize = [CCDirector sharedDirector].winSize;
-	[[CCDirector sharedDirector] runWithScene: [PageCommon  scene]];
+	[[CCDirector sharedDirector] runWithScene: [MainMenu  scene]];
 	//[[CCDirector sharedDirector] runWithScene: [GameLayer  scene]];   
     //[[CCDirector sharedDirector] runWithScene: [StoryLayer  scene]];
 }

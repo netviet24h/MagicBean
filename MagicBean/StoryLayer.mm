@@ -12,12 +12,13 @@
 @implementation StoryLayer
 @synthesize Finished=_finished;
 @synthesize PicName;
+#define kTagZhizhu 500
 +(CCScene *) scene
 {
 	CCScene *scene = [CCScene node];
-	StoryLayer *layer = [[[StoryLayer alloc] initWithName:@"p1_story" totallNum:3] autorelease];
+	//StoryLayer *layer = [[[StoryLayer alloc] initWithName:@"p1_story" totallNum:3] autorelease];
 	//StoryLayer *layer = [StoryLayer node];
-	[scene addChild: layer];
+	//[scene addChild: layer];
 	return scene;
 }
 -(void)initBox2d
@@ -141,11 +142,15 @@
     if (currentNum<=totallNum) {
         CGSize wSize = [[CCDirector sharedDirector] winSize];
         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[NSString stringWithFormat:@"%@_comic.plist",PicName]];
+        if ([PicName isEqualToString:@"p23"]) {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[NSString stringWithFormat:@"%@_comic1.plist",PicName]];
+        }
+        
         CCSprite *sp=[CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"%@_comic_%d",PicName,currentNum]];
         sp.opacity = 0;
         [sp runAction:[CCFadeIn actionWithDuration:0.5]];
         sp.anchorPoint=ccp(0.5,0.5);
-        sp.position=ccp(wSize.width/2,wSize.height/2);
+        sp.position=ccp(wSize.width/2,wSize.height/2+80);
         [self addChild:sp z:1 tag:currentNum];
         //[self performSelector:@selector(PicIn:) withObject:sp afterDelay:3.0f];
        // b2BodyDef bdf;
@@ -162,7 +167,7 @@
         b2FixtureDef fixtureDef;
         fixtureDef.isSensor = false;
         fixtureDef.shape = &shape;
-        fixtureDef.density = 0.3;
+        fixtureDef.density = 0.2;
         fixtureDef.friction = 0.1;
         fixtureDef.restitution =  1;
         pictureBody->CreateFixture(&fixtureDef);
@@ -173,7 +178,7 @@
             CCSprite *xian = [CCSprite spriteWithFile:@"comic_line.png"];    
             xian.opacity = 0;
             [xian runAction:[CCFadeIn actionWithDuration:0.1]];
-            xian.position = ccp(179,640);
+            xian.position = ccp(179+1,640+80);
            // xian.position = ccp(512,620);
             xian.anchorPoint = ccp(0.5,0);
             [self addChild:xian z:0];
@@ -208,18 +213,18 @@
             //djd.Initialize(bodyxian, groundBody,b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO), b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO));
             djd.dampingRatio = 1.0;
             djd.frequencyHz = 10;
-            djd.length = 0.2;
+            djd.length = 0.0;
             djd.collideConnected = false;
             world->CreateJoint(&djd);
 
         }        
         
         {
-            CCSprite *xian = [CCSprite spriteWithFile:@"p1_story_xian.png"];
+            CCSprite *xian = [CCSprite spriteWithFile:@"comic_line.png"];
             xian.opacity = 0;
             [xian runAction:[CCFadeIn actionWithDuration:0.1]];
             
-            xian.position = ccp(843,640);
+            xian.position = ccp(843+1,640+80);
             xian.anchorPoint = ccp(0.5,0);
             [self addChild:xian z:0];
             bodyDef.type = b2_dynamicBody;
@@ -254,15 +259,12 @@
             //djd.Initialize(bodyxian, groundBody,b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO), b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO));
             djd.dampingRatio = 1.0;
             djd.frequencyHz = 10;
-            djd.length = 0.2;
+            djd.length = 0.0;
             djd.collideConnected = false;
             world->CreateJoint(&djd);
             
         }
         pictureBody->SetTransform(b2Vec2(pictureBody->GetPosition().x,pictureBody->GetPosition().y+5), pictureBody->GetAngle());
-    }
-    else {
-        [self isFinished]; //[self performSelector:@selector(isFinished) withObject:nil afterDelay:0.0f];
     }
 }
 -(void)nextPicture
@@ -274,70 +276,222 @@
     world->DestroyBody(pictureBody);
   
     [self AddPicturs];
+    couldTouch = YES;
+    //couldTouch = YES;
 }
  
 -(void)cutJoint
 {
+   
+    
+    couldTouch = NO;
     [self unschedule:_cmd];
-    world->DestroyJoint(revJoint1);
-    world->DestroyJoint(revJoint2);
-    [(CCSprite*)pictureBody->GetUserData() runAction:[CCFadeOut actionWithDuration:1.5]];
-    [self removeChild:(CCSprite*)bodyxian1->GetUserData()  cleanup:YES];
-    [self removeChild:(CCSprite*)bodyxian2->GetUserData()  cleanup:YES];
-    world->DestroyBody(bodyxian1);
-    world->DestroyBody(bodyxian2);
+    if(revJoint1)
+    {
+         world->DestroyJoint(revJoint1);
+        [self removeChild:(CCSprite*)bodyxian1->GetUserData()  cleanup:YES];
+        world->DestroyBody(bodyxian1);
+           }
+    if (revJoint2) {
+         world->DestroyJoint(revJoint2);
+        [self removeChild:(CCSprite*)bodyxian2->GetUserData()  cleanup:YES];
+        world->DestroyBody(bodyxian2);
+
+    }
+       
+    [(CCSprite*)pictureBody->GetUserData() runAction:
+     [CCSequence actions:[CCFadeOut actionWithDuration:1.5],[CCCallBlock actionWithBlock:BCA(^(void){
+        world->DestroyBody(pictureBody);
+        [self removeChild:(CCSprite*)pictureBody->GetUserData() cleanup:YES];
+        
+    })],nil]];
+    
+    
+    
 //    [(CCSprite*)bodyxian1->GetUserData() runAction:[CCFadeOut actionWithDuration:1.5]];
 //    [(CCSprite*)bodyxian2->GetUserData() runAction:[CCFadeOut actionWithDuration:1.5]];
-    [self schedule:@selector(nextPicture) interval:0.3];
+    if (currentNum == totallNum) {
+        [self isFinished];
+    }
+    else {
+        
+        [self schedule:@selector(nextPicture) interval:0.5];
+    }
 }
+
 -(void)isFinished
 {
     _finished=YES;
-    [self runAction:[CCSequence actions:[CCDelayTime actionWithDuration:1], [CCCallBlock actionWithBlock:BCA(^(void){
-        [self.parent removeChild:self cleanup:YES];
+    CCSprite *bg = (CCSprite*)[self getChildByTag:1011];
+    [bg runAction:[CCSequence actions:[CCFadeOut actionWithDuration:0.5], [CCCallBlock actionWithBlock:BCA(^(void){
+        [self removeChild:(CCSprite*)(pictureBody->GetUserData())  cleanup:YES];
+        [self removeChild:bg cleanup:YES];
+        world->DestroyBody(pictureBody);
+        couldTouch = YES;
+        [self addZhizhu];
+        currentNum = 0;
     })],nil]];
     CCLOG(@"FINISHED!!");
 }
 
--(id)initWithName:(NSString *)picname   totallNum:(int)to_num
+-(id)initWithName:(NSString *)picname
 {
     if((self=[super init]))
     {
         [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
+        PicName = [picname copy];
+         [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[NSString stringWithFormat:@"%@_comic.plist",PicName]];
+        if ([PicName isEqualToString:@"p23"]) {
+            [[CCSpriteFrameCache sharedSpriteFrameCache] addSpriteFramesWithFile:[NSString stringWithFormat:@"%@_comic1.plist",PicName]];
+        }
         self.isAccelerometerEnabled = YES;
         currentNum=0;
-        totallNum=to_num;
-        PicName = picname;
+        NSString *path = [CCFileUtils fullPathFromRelativePath:[NSString stringWithFormat:@"%@_comic.plist",PicName]];
+        NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSDictionary *metadataDict = [dict objectForKey:@"frames"];
+        
+        totallNum=[metadataDict count];
+        if ([PicName isEqualToString:@"p23"]) {
+            totallNum=7;
+        }
         _finished=NO;
-        couldTouch=NO;
+        couldTouch=YES;
         [self initBox2d];
-        [self AddPicturs];
-        
-//        CCSprite *touchButton = [CCSprite spriteWithFile:@"Icon.png"];
-//        touchButton.position = ccp(screenSize.width/2,touchButton.contentSize.height/2);
-//        [self addChild:touchButton z: 2 tag:11111];
-        
-        CCSprite *bg = [CCSprite spriteWithFile:@"comic_blackBg.png"];
-        bg.position  = ccp(screenSize.width/2,screenSize.height/2);
-        [self addChild:bg z: -1 ];
-        
-        //[self initOther];
+        [self addZhizhu];
+                //[self initOther];
     }
     self.isTouchEnabled=YES;
     return self;
 }
-
-/*regist box2d touch method*/
--(void)ccTouchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)addZhizhu
 {
-   
-    if (m_mouseJoint) {
-		return;
-	}
-	UITouch *touch = [touches anyObject];
+    
+    CCSprite *zhizhu = [CCSprite spriteWithFile:@"comic_zhizhu_1.png"];
+    
+    zhizhu.anchorPoint=ccp(0.5,0.5);
+    zhizhu.position=ccp(screenSize.width/2,screenSize.height/2+200+50);
+    [self addChild:zhizhu z:1 tag:kTagZhizhu];
+    b2BodyDef bodyDef;
+    bodyDef.type = b2_dynamicBody;
+    bodyDef.position.Set(zhizhu.position.x/PTM_RATIO, zhizhu.position.y/PTM_RATIO);
+    bodyDef.userData = zhizhu;	
+    
+    pictureBody3 = world->CreateBody(&bodyDef);
+    b2PolygonShape shape;
+    shape.SetAsBox(zhizhu.contentSize.width/2/PTM_RATIO,zhizhu.contentSize.height/2/PTM_RATIO);
+    
+    b2FixtureDef fixtureDef;
+    fixtureDef.isSensor = false;
+    fixtureDef.shape = &shape;
+    fixtureDef.density = 7;
+    fixtureDef.friction = 0.1;
+    fixtureDef.restitution =  1;
+    pictureBody3->CreateFixture(&fixtureDef);
+    
+    id a1 = [CCSequence actions:[CCDelayTime actionWithDuration:2],
+             [CCCallBlock actionWithBlock:BCA(^(void){ [zhizhu setTexture:[[CCTextureCache sharedTextureCache] addImage:@"comic_zhizhu_2.png"]];})],
+             [CCDelayTime actionWithDuration:0.1] ,
+             [CCCallBlock actionWithBlock:BCA(^(void){ [zhizhu setTexture:[[CCTextureCache sharedTextureCache] addImage:@"comic_zhizhu_1.png"]];})],
+             [CCDelayTime actionWithDuration:0.1] ,
+             [CCCallBlock actionWithBlock:BCA(^(void){ [zhizhu setTexture:[[CCTextureCache sharedTextureCache] addImage:@"comic_zhizhu_2.png"]];})],
+             [CCDelayTime actionWithDuration:0.1] ,
+             [CCCallBlock actionWithBlock:BCA(^(void){ [zhizhu setTexture:[[CCTextureCache sharedTextureCache] addImage:@"comic_zhizhu_1.png"]];})],nil];
+
+    id a2 =[CCRepeatForever actionWithAction:a1];
+    [zhizhu runAction:a2];
+    CCSprite *xian = [CCSprite spriteWithFile:@"comic_line.png"];    
+    xian.opacity = 0;
+    [xian runAction:[CCFadeIn actionWithDuration:0.1]];
+    xian.position = ccp(screenSize.width/2,600+50);
+    // xian.position = ccp(512,620);
+    xian.anchorPoint = ccp(0.5,0);
+    [self addChild:xian z:0];
+    bodyDef.type = b2_dynamicBody;
+    
+    bodyDef.position.Set(xian.position.x/PTM_RATIO, xian.position.y/PTM_RATIO);
+    bodyDef.userData = xian;
+    
+    bodyxian3 = world->CreateBody(&bodyDef);
+    b2PolygonShape shapexian;
+    shapexian.SetAsBox(xian.contentSize.width/2/PTM_RATIO,xian.contentSize.height/2/PTM_RATIO);
+    fixtureDef.isSensor = true;
+    fixtureDef.shape = &shape;
+    fixtureDef.density = 0.0;
+    fixtureDef.friction = 0.1;
+    fixtureDef.restitution =  1;
+    bodyxian3->CreateFixture(&fixtureDef);
+    
+    b2RevoluteJointDef rjd;
+    rjd.Initialize(bodyxian3, pictureBody3, bodyxian3->GetPosition());
+    rjd.motorSpeed = 0;//1.0f * b2_pi;
+    rjd.maxMotorTorque = 0;
+    rjd.enableMotor = NO;
+    rjd.lowerAngle = -1/15.0f * b2_pi;
+    rjd.upperAngle = 1/15.0f * b2_pi;
+    rjd.enableLimit = false;
+    rjd.collideConnected = false;
+    revJoint3 = world->CreateJoint(&rjd);
+    
+    b2DistanceJointDef djd;
+    djd.Initialize(bodyxian3, groundBody,b2Vec2(bodyxian3->GetPosition().x,(bodyxian3->GetPosition().y+793)/PTM_RATIO), b2Vec2(bodyxian3->GetPosition().x,(bodyxian3->GetPosition().y+793)/PTM_RATIO));
+    //djd.Initialize(bodyxian, groundBody,b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO), b2Vec2(bodyxian->GetPosition().x,screenSize.height/PTM_RATIO));
+    djd.dampingRatio = 1.0;
+    djd.frequencyHz = 10;
+    djd.length = 0.0;
+    djd.collideConnected = false;
+    world->CreateJoint(&djd);
+
+}
+-(void)cutZhizhu
+{
+    couldTouch = NO;
+    [CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
+    if(revJoint3)
+    {
+        world->DestroyJoint(revJoint3);
+        [self removeChild:(CCSprite*)bodyxian3->GetUserData()  cleanup:YES];
+        world->DestroyBody(bodyxian3);
+    }
+    CCSprite *bg = [CCSprite spriteWithFile:@"comic_blackBg.png"];
+    bg.position  = ccp(screenSize.width/2,screenSize.height/2);
+    bg.opacity = 0;
+    [self addChild:bg z: -1 tag:1011];
+    [bg runAction:[CCFadeIn actionWithDuration:0.3]];
+    [(CCSprite*)pictureBody3->GetUserData() runAction:
+     [CCSequence actions:[CCFadeOut actionWithDuration:0.2],[CCCallBlock actionWithBlock:BCA(^(void){
+        world->DestroyBody(pictureBody3);
+        [self removeChild:(CCSprite*)pictureBody3->GetUserData() cleanup:YES];
+        couldTouch = YES;
+        [self AddPicturs];
+    })],nil]];
+}
+-(void)registerWithTouchDispatcher
+{
+    [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+}
+/*regist box2d touch method*/
+-(BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    //UITouch *touch = [touches anyObject];
 	CGPoint rightPosition = [touch locationInView:[touch view]];
 	rightPosition = [[CCDirector sharedDirector] convertToGL:rightPosition];
-    
+
+    CCSprite *zhizhu = (CCSprite*)[self getChildByTag:kTagZhizhu];
+    if (CGRectContainsPoint(zhizhu.boundingBox, rightPosition)) {
+        [self cutZhizhu];
+        if (m_mouseJoint) {
+            world->DestroyJoint(m_mouseJoint);
+            m_mouseJoint = NULL;
+        }
+        return NO;
+    }
+    if (couldTouch == NO || zhizhu) {
+        return NO;
+    }
+    if (m_mouseJoint) {
+		return NO;
+	}
+	    
 	b2Vec2 p =b2Vec2(rightPosition.x/PTM_RATIO,rightPosition.y/PTM_RATIO);
 	m_mouseWorld = p;
 	b2BodyDef bodyDef;
@@ -364,7 +518,7 @@
 		m_mouseJoint = (b2MouseJoint*)world->CreateJoint(&md);
 		m_mouseBody->SetAwake(true);
 	}
-	
+	return YES;
 }
 //- (void)accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)acceleration
 //{	
@@ -385,11 +539,11 @@
 //	
 //	world->SetGravity( gravity );
 //}
--(void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+-(void)ccTouchMoved:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	
 	
-	UITouch *touch = [touches anyObject];
+	//UITouch *touch = [touches anyObject];
 	CGPoint rightPosition = [touch locationInView:[touch view]];
 	rightPosition = [[CCDirector sharedDirector] convertToGL:rightPosition];
 	
@@ -402,16 +556,18 @@
 	}
 	
 }
--(void)ccTouchesEnded:(NSSet*)touches withEvent:(UIEvent*)event
+-(void)ccTouchEnded:(UITouch*)touch withEvent:(UIEvent*)event
 {
-	UITouch *touch = [touches anyObject];
+	//UITouch *touch = [touches anyObject];
 	CGPoint touchLocation=[touch locationInView:[touch view]];
 	touchLocation=[[CCDirector sharedDirector] convertToGL:touchLocation];
+  
     
 	if (m_mouseJoint) {
-		[self cutJoint];
+		
 		world->DestroyJoint(m_mouseJoint);
 		m_mouseJoint = NULL;
+        [self cutJoint];
 	}
 	
 }
@@ -424,6 +580,7 @@
 -(void)dealloc
 {
     [super dealloc];
+    //CCLOG(@"%d",[PicName retainCount]);
     [PicName release];
 }
 

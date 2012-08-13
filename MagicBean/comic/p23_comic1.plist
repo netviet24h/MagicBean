@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>p23_comic_7</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{729,515}}</string>
+                <key>offset</key>
+                <string>{1,2}</string>
+                <key>sourceSize</key>
+                <string>{729,515}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+            <key>realTextureFileName</key>
+            <string>p23_comic1.pvr.ccz</string>
+            <key>size</key>
+            <string>{733,519}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e5f4782b1497c4e3f126579617e99508$</string>
+            <key>textureFileName</key>
+            <string>p23_comic1.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

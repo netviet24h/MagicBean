@@ -157,28 +157,24 @@ Class backAction()
         CCSprite *bg = [CCSprite spriteWithFile:@"g_background.jpg"];
         [self addChild:bg z:-3];
          bg.position = ccp(screenSize.width/2,screenSize.height/2);
-        NSString *wenzi =[NSString stringWithFormat:@"P%dLABEL",sceneIdx];        
-        wenzi = NSLocalizedString(wenzi, nil);
-        label = [CCLabelTTF labelWithString:wenzi dimensions:CGSizeMake(700, 200) alignment:UITextAlignmentLeft lineBreakMode:UILineBreakModeClip fontName:@"FZMWFont.ttf" fontSize:25];
-        //[self addChild:label z:20];
-        label.anchorPoint = ccp(0.5,1);
-        label.color = ccc3(0, 0, 0);
-        label.position = ccp(500,492);//for ipad
+        CCLayer *storyLayer = [[[StoryLayer alloc] initWithName:[NSString stringWithFormat:@"p%d",sceneIdx]] autorelease];
+        [self addChild:storyLayer z:10];
+//        NSString *wenzi =[NSString stringWithFormat:@"P%dLABEL",sceneIdx];        
+//        wenzi = NSLocalizedString(wenzi, nil);
+//        label = [CCLabelTTF labelWithString:wenzi dimensions:CGSizeMake(700, 200) alignment:UITextAlignmentLeft lineBreakMode:UILineBreakModeClip fontName:@"FZMWFont.ttf" fontSize:25];
+//        //[self addChild:label z:20];
+//        label.anchorPoint = ccp(0.5,1);
+//        label.color = ccc3(0, 0, 0);
+//        label.position = ccp(500,492);//for ipad
     }
-//	CCMenuItemImage *item1 = [CCMenuItemImage itemFromNormalImage:@"Anniu_C_Left_up_35.996.png" selectedImage:@"Anniu_C_Left_down_35.996.png" target:self selector:@selector(backCallback:)];
-//	CCMenuItemImage *item2 = [CCMenuItemImage itemFromNormalImage:@"Anniu_C_Setup_up_725.45.png" selectedImage:@"Anniu_C_Setup_down_725.45.png" target:self selector:@selector(menuCallback:)];
-//	CCMenuItemImage *item3 = [CCMenuItemImage itemFromNormalImage:@"Anniu_C_Right_up_733.996.png" selectedImage:@"Anniu_C_Right_down_733.996.png" target:self selector:@selector(nextCallback:)];
-//    item1.position = ccp( 35,27.5);
-//	item2.position = ccp( 982,768-45);
-//	item3.position = ccp( 983,27.5);
     CCMenuItemImage *item1 = [CCMenuItemImage itemFromNormalImage:@"l_1.png" selectedImage:@"l_2.png" target:self selector:@selector(backCallback:)];
 	CCMenuItemImage *item2 = [CCMenuItemImage itemFromNormalImage:@"Anniu_C_Setup_up_725.45.png" selectedImage:@"Anniu_C_Setup_down_725.45.png" target:self selector:@selector(menuCallback:)];
 	CCMenuItemImage *item3 = [CCMenuItemImage itemFromNormalImage:@"r_1.png" selectedImage:@"r_2.png" target:self selector:@selector(nextCallback:)];
 	CCMenu *menu = [CCMenu menuWithItems:item1, item2, item3, nil];
 	menu.position = CGPointZero;
-    item1.position = ccp( item1.contentSize.width/2,item1.contentSize.height/2);
-	item2.position = ccp( 982,768-45);//for ipad
-	item3.position = ccp( screenSize.width-item3.contentSize.width/2,item1.contentSize.height/2);	
+    item1.position = ccp( item1.contentSize.width/2,screenSize.height/2+100);
+	item2.position = ccp( screenSize.width-item2.contentSize.width/2,screenSize.height-item2.contentSize.height/2);//for ipad
+	item3.position = ccp( screenSize.width-item3.contentSize.width/2,screenSize.height/2+100);	
 	[self addChild:menu z:10];
 }
 -(void)initBox2d
@@ -236,6 +232,7 @@ Class backAction()
 	
 	[self schedule:@selector(tick:)];
 }
+
 -(void) tick: (ccTime) dt
 {
 	//It is recommended that a fixed time step is used with Box2D for stability
@@ -323,8 +320,7 @@ Class backAction()
 -(void)onEnterTransitionDidFinish
 {
 	[super onEnterTransitionDidFinish];
-    
-    
+        
     //[self loadSpriteSheet];
 	//[[CCTextureCache sharedTextureCache] dumpCachedTextureInfo];
 }
@@ -340,7 +336,6 @@ Class backAction()
 }
 - (void) onExitTransitionDidStart
 {
-    
 }
 - (void) onExit
 {
@@ -398,7 +393,7 @@ Class backAction()
 {
 	self.isAccelerometerEnabled = NO;
 	[self unschedule:@selector(tick:)];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[NSClassFromString([NSString stringWithFormat:@"PageLayer%d",sceneIdx])  scene]]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1 scene:[index_Scene  scene]]];
 	NSString *path = [[NSBundle mainBundle] pathForResource:@"menubtn" ofType:@"wav"];
 	SystemSoundID soundID;
 	AudioServicesCreateSystemSoundID((CFURLRef)[NSURL fileURLWithPath:path], &soundID);
@@ -570,8 +565,6 @@ Class backAction()
 		CCLOG(@"in layer1");
 		//[self initBox2d];
         [self loadSpriteSheet];
-        CCLayer *storyLayer = [[StoryLayer alloc] initWithName:@"p1" totallNum:3];
-        [self addChild:storyLayer z:10];
         vel = ccp(1.5,0);
         //cloud 
 		for (int i = 0 ; i<5; i++) {
@@ -862,8 +855,6 @@ Class backAction()
 {
 	if ((self = [super init])) {
         self.isAccelerometerEnabled = NO;
-        CCLayer *storyLayer = [[StoryLayer alloc] initWithName:@"p3" totallNum:4];
-        [self addChild:storyLayer z:10];
 		CCLOG(@"in layer3");
         [self loadSpriteSheet];
         [self initBox2d];
