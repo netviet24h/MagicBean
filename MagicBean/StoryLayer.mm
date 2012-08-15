@@ -148,7 +148,7 @@
         
         CCSprite *sp=[CCSprite spriteWithSpriteFrameName:[NSString stringWithFormat:@"%@_comic_%d",PicName,currentNum]];
         sp.opacity = 0;
-        [sp runAction:[CCFadeIn actionWithDuration:0.5]];
+        [sp runAction:[CCFadeIn actionWithDuration:0.2]];
         sp.anchorPoint=ccp(0.5,0.5);
         sp.position=ccp(wSize.width/2,wSize.height/2+80);
         [self addChild:sp z:1 tag:currentNum];
@@ -264,7 +264,7 @@
             world->CreateJoint(&djd);
             
         }
-        pictureBody->SetTransform(b2Vec2(pictureBody->GetPosition().x,pictureBody->GetPosition().y+5), pictureBody->GetAngle());
+        pictureBody->SetTransform(b2Vec2(pictureBody->GetPosition().x,pictureBody->GetPosition().y+7), pictureBody->GetAngle());
     }
 }
 -(void)nextPicture
@@ -300,7 +300,7 @@
     }
        
     [(CCSprite*)pictureBody->GetUserData() runAction:
-     [CCSequence actions:[CCFadeOut actionWithDuration:1.5],[CCCallBlock actionWithBlock:BCA(^(void){
+     [CCSequence actions:[CCFadeOut actionWithDuration:0.4],[CCDelayTime actionWithDuration:1],[CCCallBlock actionWithBlock:BCA(^(void){
         world->DestroyBody(pictureBody);
         [self removeChild:(CCSprite*)pictureBody->GetUserData() cleanup:YES];
         
@@ -315,7 +315,7 @@
     }
     else {
         
-        [self schedule:@selector(nextPicture) interval:0.5];
+        [self schedule:@selector(nextPicture) interval:0.4];
     }
 }
 
@@ -357,7 +357,13 @@
         _finished=NO;
         couldTouch=YES;
         [self initBox2d];
-        [self addZhizhu];
+        //[self addZhizhu];
+        CCSprite *bg = [CCSprite spriteWithFile:@"comic_blackBg.png"];
+        bg.position  = ccp(screenSize.width/2,screenSize.height/2);
+        bg.opacity = 0;
+        [self addChild:bg z: -1 tag:1011];
+        [bg runAction:[CCFadeIn actionWithDuration:0.3]];
+        [self AddPicturs];
                 //[self initOther];
     }
     self.isTouchEnabled=YES;
@@ -369,7 +375,7 @@
     CCSprite *zhizhu = [CCSprite spriteWithFile:@"comic_zhizhu_1.png"];
     
     zhizhu.anchorPoint=ccp(0.5,0.5);
-    zhizhu.position=ccp(screenSize.width/2,screenSize.height/2+200+50);
+    zhizhu.position=ccp(screenSize.width/2,screenSize.height/2+200+80);
     [self addChild:zhizhu z:1 tag:kTagZhizhu];
     b2BodyDef bodyDef;
     bodyDef.type = b2_dynamicBody;
@@ -402,7 +408,7 @@
     CCSprite *xian = [CCSprite spriteWithFile:@"comic_line.png"];    
     xian.opacity = 0;
     [xian runAction:[CCFadeIn actionWithDuration:0.1]];
-    xian.position = ccp(screenSize.width/2,600+50);
+    xian.position = ccp(screenSize.width/2,600+80);
     // xian.position = ccp(512,620);
     xian.anchorPoint = ccp(0.5,0);
     [self addChild:xian z:0];
@@ -440,7 +446,8 @@
     djd.length = 0.0;
     djd.collideConnected = false;
     world->CreateJoint(&djd);
-
+    
+    pictureBody3->SetTransform(b2Vec2(pictureBody3->GetPosition().x,pictureBody->GetPosition().y+5), 0);
 }
 -(void)cutZhizhu
 {
@@ -456,7 +463,7 @@
     bg.position  = ccp(screenSize.width/2,screenSize.height/2);
     bg.opacity = 0;
     [self addChild:bg z: -1 tag:1011];
-    [bg runAction:[CCFadeIn actionWithDuration:0.3]];
+    [bg runAction:[CCFadeIn actionWithDuration:0.2]];
     [(CCSprite*)pictureBody3->GetUserData() runAction:
      [CCSequence actions:[CCFadeOut actionWithDuration:0.2],[CCCallBlock actionWithBlock:BCA(^(void){
         world->DestroyBody(pictureBody3);
@@ -475,23 +482,24 @@
     //UITouch *touch = [touches anyObject];
 	CGPoint rightPosition = [touch locationInView:[touch view]];
 	rightPosition = [[CCDirector sharedDirector] convertToGL:rightPosition];
-
     CCSprite *zhizhu = (CCSprite*)[self getChildByTag:kTagZhizhu];
-    if (CGRectContainsPoint(zhizhu.boundingBox, rightPosition)) {
-        [self cutZhizhu];
-        if (m_mouseJoint) {
-            world->DestroyJoint(m_mouseJoint);
-            m_mouseJoint = NULL;
+    if(zhizhu){
+        if (CGRectContainsPoint(zhizhu.boundingBox, rightPosition)) {
+            [self cutZhizhu];
+            if (m_mouseJoint) {
+                world->DestroyJoint(m_mouseJoint);
+                m_mouseJoint = NULL;
+            }
+            return NO;
         }
-        return NO;
     }
     if (couldTouch == NO || zhizhu) {
         return NO;
     }
     if (m_mouseJoint) {
-		return NO;
-	}
-	    
+        return NO;
+    }
+
 	b2Vec2 p =b2Vec2(rightPosition.x/PTM_RATIO,rightPosition.y/PTM_RATIO);
 	m_mouseWorld = p;
 	b2BodyDef bodyDef;
